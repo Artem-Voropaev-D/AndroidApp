@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".FragmentTwo">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/etLeft"
+            android:layout_width="78dp"
+            android:layout_height="62dp"
+            android:layout_margin="16dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="16dp"
+            android:hint="Высота"
+            android:inputType="number"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/etTop"
+            app:layout_constraintTop_toBottomOf="@+id/name" />
+
+        <EditText
+            android:id="@+id/etTop"
+            android:layout_width="78dp"
+            android:layout_height="62dp"
+            android:layout_below="@id/etLeft"
+            android:layout_margin="16dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="32dp"
+            android:hint="Ширина"
+            android:inputType="number"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/etRight"
+            app:layout_constraintTop_toBottomOf="@+id/name" />
+
+        <EditText
+            android:id="@+id/etRight"
+            android:layout_width="78dp"
+            android:layout_height="62dp"
+            android:layout_below="@id/etTop"
+            android:layout_margin="16dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:hint="Длина"
+            android:inputType="number"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/etBottom"
+            app:layout_constraintTop_toBottomOf="@+id/name" />
+
+        <EditText
+            android:id="@+id/etBottom"
+            android:layout_width="78dp"
+            android:layout_height="62dp"
+            android:layout_below="@id/etRight"
+            android:layout_margin="16dp"
+            android:layout_marginTop="16dp"
+            android:hint="Вес"
+            android:inputType="number"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name" />
+
+        <Button
+            android:id="@+id/btnDrawRectangle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etBottom"
+            android:layout_marginTop="420dp"
+            android:text="Добавить предмет"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+        <Button
+            android:id="@+id/btnDrawAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnDrawRectangle"
+            android:layout_marginTop="500dp"
+            android:text="Расставить предметы"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/btnDrawAll"
+            android:scaleType="fitXY"
+            tools:layout_editor_absoluteX="-195dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="116dp"
+            android:onClick="Change"
+            android:text="Назад"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnDrawAll" />
+
+        <Spinner
+            android:id="@+id/rectSpinner"
+            android:layout_width="378dp"
+            android:layout_height="48dp"
+            android:layout_below="@id/btnDrawAll"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="50dp"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="100dp"
+            android:layout_height="62dp"
+            android:layout_below="@id/etTop"
+            android:layout_margin="16dp"
+            android:hint="Название"
+            android:inputType="numberDecimal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/imageView"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="@+id/imageView"
+            app:layout_constraintVertical_bias="0.269" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
