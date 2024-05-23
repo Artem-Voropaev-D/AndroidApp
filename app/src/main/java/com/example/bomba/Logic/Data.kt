@@ -1,4 +1,4 @@
-package com.example.bomba
+package com.example.bomba.Logic
 
 import android.graphics.Bitmap
 import android.graphics.Canvas
@@ -18,6 +18,8 @@ class Data(
 ){
     companion object{
         val data = Data()
+        var bitmap = Bitmap.createBitmap(700, 1000, Bitmap.Config.ARGB_8888)
+        var canvas = Canvas(bitmap)
     }
 }
 
@@ -186,8 +188,10 @@ internal class Level(maxWidth: Int, rectlength: Int, currentlength: Int) {
 
     fun drawAllRectangles(sc: Int, ImageView2: ImageView){
         val daTa = Data.data
-        var bitmap = Bitmap.createBitmap(700, 1000, Bitmap.Config.ARGB_8888)
-        var canvas = Canvas(bitmap)
+//        var bitmap = Bitmap.createBitmap(700, 1000, Bitmap.Config.ARGB_8888)
+//        var canvas = Canvas(bitmap)
+        val canvas = Data.canvas
+        val bitmap = Data.bitmap
 
         var StartY = 900f - sc.toFloat()*850f/ daTa.length_r//откуда рисуется первый прямоугольник левый нижний угол по вертикали
         var StartX = 50f //откуда рисуется первый прямоугольник левый нижний угол по горизонтали

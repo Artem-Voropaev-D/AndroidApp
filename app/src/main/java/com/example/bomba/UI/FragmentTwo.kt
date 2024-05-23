@@ -1,4 +1,4 @@
-package com.example.bomba
+package com.example.bomba.UI
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -11,6 +11,8 @@ import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Spinner
 import android.widget.Toast
+import com.example.bomba.Logic.Rectangl
+import com.example.bomba.R
 
 
 class FragmentTwo : Fragment() {
@@ -38,13 +40,13 @@ class FragmentTwo : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val buttonDrawAll = view.findViewById<Button>(R.id.btnDrawAll)
-        imageView = view.findViewById<ImageView>(R.id.imageView)
-        etLeft = view.findViewById<EditText>(R.id.etLeft)
-        etTop = view.findViewById<EditText>(R.id.etTop)
-        etRight = view.findViewById<EditText>(R.id.etRight)
-        etBottom = view.findViewById<EditText>(R.id.etBottom)
-        rectSpinner = view.findViewById<Spinner>(R.id.rectSpinner)
-        name = view.findViewById<EditText>(R.id.name)
+        imageView = view.findViewById(R.id.imageView)
+        etLeft = view.findViewById(R.id.etLeft)
+        etTop = view.findViewById(R.id.etTop)
+        etRight = view.findViewById(R.id.etRight)
+        etBottom = view.findViewById(R.id.etBottom)
+        rectSpinner = view.findViewById(R.id.rectSpinner)
+        name = view.findViewById(R.id.name)
         updateRectSpinner(data.rectangles_draw.size)
 
         buttonDrawAll.setOnClickListener {
